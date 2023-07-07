@@ -1,0 +1,314 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* Hide the scrollbar track */
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f9fafb;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #4b5563;
+}
+
+textarea {
+  resize: none;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+h5 {
+  font-size: 1.3rem;
+  font-weight: normal;
+}
+
+h6 {
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+/* Tables */
+/* table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+} */
+table {
+  border-collapse: separate;
+  border-spacing: 0rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+}
+
+td,
+th {
+  border-left: solid #ddd 1px;
+  border-top: solid #ddd 1px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+  border-top: none;
+}
+
+td:first-child {
+  border-left: none;
+}
+
+th:first-child {
+  border-left: none;
+  border-top-left-radius: 0.45rem;
+}
+
+th:last-child {
+  border-top-right-radius: 0.45rem;
+}
+/* Lists */
+ul,
+ol {
+  margin: 0;
+  padding-left: 1.5em;
+}
+
+/* Blockquotes */
+blockquote {
+  margin: 0;
+  padding: 10px 20px;
+  background-color: #f2f2f2;
+  border-left: 4px solid #ccc;
+  font-style: italic;
+}
+
+/* Links */
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #1d4ed8;
+}
+
+/* CODE CSS */
+pre {
+  margin: 1rem;
+}
+
+code {
+  border-radius: 0.5rem;
+}
+
+.keyword {
+  color: #c792ea;
+  font-style: italic;
+}
+
+.built_in {
+  color: #addb67;
+  font-style: italic;
+}
+.type {
+  color: #82aaff;
+}
+.literal {
+  color: #ff5874;
+}
+.number {
+  color: #f78c6c;
+}
+.regexp {
+  color: #5ca7e4;
+}
+.string {
+  color: #ecc48d;
+}
+.subst {
+  color: #d3423e;
+}
+.symbol {
+  color: #82aaff;
+}
+.class {
+  color: #ffcb8b;
+}
+.function {
+  color: #82aaff;
+}
+.title {
+  color: #dcdcaa;
+  font-style: italic;
+}
+.params {
+  color: #7fdbca;
+}
+
+/* Meta */
+.comment {
+  color: #637777;
+  font-style: italic;
+}
+.doctag {
+  color: #7fdbca;
+}
+.meta {
+  color: #82aaff;
+}
+.meta-keyword {
+  color: #82aaff;
+}
+.meta-string {
+  color: #ecc48d;
+}
+
+/* Tags, attributes, config */
+.section {
+  color: #82b1ff;
+}
+.tag,
+.name,
+.builtin-name {
+  color: #7fdbca;
+}
+.attr {
+  color: #7fdbca;
+}
+.attribute {
+  color: #80cbc4;
+}
+.variable {
+  color: #addb67;
+}
+/* Markup */
+.bullet {
+  color: #d9f5dd;
+}
+.code {
+  color: #80cbc4;
+}
+.emphasis {
+  color: #c792ea;
+  font-style: italic;
+}
+.strong {
+  color: #addb67;
+  font-weight: bold;
+}
+.formula {
+  color: #c792ea;
+}
+.link {
+  color: #ff869a;
+}
+.quote {
+  color: #697098;
+  font-style: italic;
+}
+
+/* CSS */
+.selector-tag {
+  color: #ff6363;
+}
+
+.selector-id {
+  color: #fad430;
+}
+
+.selector-class {
+  color: #addb67;
+  font-style: italic;
+}
+
+.selector-attr,
+.selector-pseudo {
+  color: #c792ea;
+  font-style: italic;
+}
+
+/* Templates */
+.template-tag {
+  color: #c792ea;
+}
+.template-variable {
+  color: #addb67;
+}
+
+/* diff */
+.addition {
+  color: #addb67ff;
+  font-style: italic;
+}
+
+.deletion {
+  color: #ef535090;
+  font-style: italic;
+}
